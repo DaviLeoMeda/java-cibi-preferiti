@@ -19,8 +19,17 @@ public class CibiPreferiti {
 		System.out.println("La Lunghezza dell'array è di " + favoriteDishes.length);
 		
 		System.out.println("Il tuo piatto preferito in assoluto è " + favoriteDishes[0]);
-		System.out.println("Il tuo piatto meno preferito è " + favoriteDishes[6]);
-		System.out.println("Il tuo piatto mediamente preferito è " + favoriteDishes[3]);
+		System.out.println("Il tuo piatto meno preferito è " + favoriteDishes[favoriteDishes.length - 1]);
+		int medIndex = favoriteDishes.length / 2;
+		boolean pairArray = favoriteDishes.length % 2 == 0;
+		
+		System.out.println("Il tuo piatto mediamente preferito è " + (
+				pairArray
+				? favoriteDishes[medIndex - 1] + " ~ " + favoriteDishes[medIndex]
+				: favoriteDishes[medIndex]
+				)
+				);
+		
 		
 		
 	}
